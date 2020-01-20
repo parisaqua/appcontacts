@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'
 
-class Titre extends Component {
-    render() {
-        return(
-            <div>
-                <h1>Ma poule, ça c'est du composant !</h1>
-                {this.props.nom}
-                {this.props.children}
-            </div>
-        )
-    }
+function Titre(props) {
+    return (
+        <div>
+            <h1>Hi, my name is {props.nom}.</h1>
+        </div>
+    )
+}
+
+Titre.propTypes = {
+    nom: PropTypes.string.isRequired
 }
 
 export default Titre;
