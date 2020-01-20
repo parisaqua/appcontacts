@@ -7,7 +7,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Titre />
+        <Titre nom='Hugo'  />
+        <Titre nom='Bob' />
+        Roule ma p'tite
+        <Titre nom='Fréd' />
       </div>
     );
   }
