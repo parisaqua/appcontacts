@@ -27,6 +27,14 @@ export default class Liste extends Component {
         ]
     }
 
+    supprime = (id) => {
+        const nvContacts = this.state.contacts.filter(
+            contact => contact.id !== id)
+            this.setState({
+                contacts: nvContacts
+            })
+    }
+    
     render() {
         return (
             <div>
@@ -36,6 +44,7 @@ export default class Liste extends Component {
                         nom={contact.nom}
                         email={contact.email}
                         telephone={contact.telephone}
+                        supprimeClick={() => this.supprime(contact.id)}
                     />
                 ))}
             </div>

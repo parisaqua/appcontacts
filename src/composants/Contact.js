@@ -6,6 +6,11 @@ export default class Contact extends Component {
         show: true
     }
 
+    supprimerContact = () => {
+       
+        this.props.supprimeClick()
+    }
+
     montrerContact = () => {
         this.setState({
             show: !this.state.show
@@ -17,9 +22,14 @@ export default class Contact extends Component {
             <div className="card card-body mb-3 text-center">
                 <h4>
                     {this.props.nom}&nbsp;
-                    <i style={{cursor: 'pointer'}} className="fas fa-sort-down"
-                    onClick={this.montrerContact}
-                    ></i>
+                    <i style={{cursor: 'pointer'}} 
+                    className="fas fa-sort-down"
+                    onClick={this.montrerContact}>
+                    </i>
+                    <i className="fas fa-times text-danger" 
+                    style={{cursor: 'pointer', float: 'right'}}
+                    onClick={this.supprimerContact} >
+                    </i>
                 </h4>
                 {this.state.show ? (
                     <ul className="card card-body mb-3">
