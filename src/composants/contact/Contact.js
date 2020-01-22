@@ -3,6 +3,10 @@ import { Consumer } from '../../context';
 
 export default class Contact extends Component {
     
+    componentDidUpdate() {
+        console.log('componentDidUpdate')
+    }
+    
     state= {
         show: false
     }

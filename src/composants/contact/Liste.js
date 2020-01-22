@@ -5,6 +5,16 @@ import { Consumer } from '../../context';
 
 export default class Liste extends Component {
     
+    componentDidMount() {
+        console.log('componentDidMount')
+    }
+
+    UNSAFE_componentWillMount() {
+        console.log('componentWillMount')
+    }
+
+    
+    
     render() {
 
         return (

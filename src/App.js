@@ -4,6 +4,7 @@ import Header from './composants/interface/Header';
 import Liste from './composants/contact/Liste';
 import APropos from './composants/pages/APropos'
 import Erreur from './composants/pages/Erreur'
+import Accueil from './composants/pages/Accueil'
 import { Provider } from './context';
 import AddContact from './composants/contact/AddContact';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -18,7 +19,8 @@ class App extends Component {
           <div className="App">
             <Header />
             <div className="container">
-              <Switch>
+              <Switch>   
+                <Route exact path="/" component={Accueil}/>
                 <Route exact path="/ajouter" component={AddContact}/>
                 <Route exact path="/liste" component={Liste}/>
                 <Route exact path="/apropos" component={APropos}/>
