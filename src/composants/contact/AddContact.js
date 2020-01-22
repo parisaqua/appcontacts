@@ -28,6 +28,8 @@ export default class AddContact extends Component {
             email: '',
             telephone: ''
         })
+
+        this.props.history.push('/liste')
     }
 
     render() {
